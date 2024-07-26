@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hoisting</h1>
+    <p>
+      Hoisting in JavaScript is a behavior where variable and function
+      declarations are moved to the top of their containing scope during the
+      compile phase, before code execution.
+    </p>
+
+<script>
+
+
+// 1 
+console.log(a)   // undefined 
+var a = 10
+console.log(a)  // 10
+
+
+// 2
+console.log(b) // ReferenceError: Cannot access 'b' before initialization
+let b = 10
+
+
+// 3
+function text(){
+    console.log(a)   // undefined 
+    var a = 10
+}
+text()
+
+
+// 4
+let c = 10
+function host(){
+    console.log(c)   // 10
+}
+host()
+
+
+
+
+
+
+
+
+
+
+</script>
+  </body>
+</html>
